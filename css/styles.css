@@ -554,7 +554,10 @@ body.dark .bienvenida .eslogan {
   width: 50px;
   height: 50px;
 }
-
+.icon-link{
+  text-decoration: none;
+  color: var(--azul-oscuro);
+}
 
 footer {
   background-color: var(--azul-oscuro);
