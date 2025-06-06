@@ -181,7 +181,7 @@ main {
 
 .superposicion-texto h1 {
   font-size: 2.5rem;
-  color: var(--amarillo);
+  color: var(--azul-oscuro);
 }
 
 .superposicion-texto .eslogan {
@@ -200,7 +200,9 @@ main {
   padding: 0.6rem 1.2rem;
   border: none;
   border-radius: 999px;
-  background-color: var(--rosa);
+  /* background-color: var(--rosa); */
+  background: #2B2D42;
+  background: linear-gradient(90deg,rgba(43, 45, 66, 1) 75%, rgba(109, 115, 168, 1) 100%);
   color: var(--blanco);
   font-size: 1rem;
   cursor: pointer;
@@ -361,7 +363,7 @@ main {
 	display: flex;
 	justify-content: center;
 	gap: 10px;
-	margin-top: 60px;
+	margin: 2rem 0 1rem;
 }
 
 .dot {
@@ -512,7 +514,7 @@ body.dark .footer {
 }
 
 body.dark .bienvenida h1 {
-  color: var(--amarillo);
+  color: var(--azul-oscuro);
 }
 
 body.dark .bienvenida .eslogan {
@@ -540,7 +542,7 @@ footer {
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 footer a {
