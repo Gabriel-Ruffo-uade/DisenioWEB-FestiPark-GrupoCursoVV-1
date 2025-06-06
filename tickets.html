@@ -12,19 +12,23 @@
 </head>
 
 <body>
-  <header class="header">
-    <div class="logo">Festi Park</div>
-    <nav class="nav" id="nav">
-      <ul class="nav-list">
-        <li><a href="index.html"><i class="icon-home"></i><span>Inicio</span></a></li>
-        <li><a href="atracciones.html"><i class="icon-map"></i><span>Atracciones</span></a></li>
-        <li><a href="ofertas.html"><i class="icon-tag"></i><span>Ofertas</span></a></li>
-        <li><a href="tickets.html" aria-current="page"><i class="icon-ticket"></i><span>Entradas</span></a></li>
-      </ul>
-    </nav>
-    <button class="hamburger" id="hamburger" aria-label="Abrir menú de navegación">☰</button>
-    <button id="toggle-dark" class="toggle-dark" aria-label="Activar modo oscuro">🌓</button>
-  </header>
+    <header class="header">
+        <div class="logo"><img src="./src/logo.png" alt="Logo" /></div>
+        <nav class="nav" aria-label="Menú principal">
+            <ul class="nav-list">
+                <li><a href="index.html" class="active"><i class="fas fa-home"></i><span
+                            class="nav-text">Inicio</span></a></li>
+                <li><a href="atracciones.html"><i class="fas fa-map-marker-alt"></i><span
+                            class="nav-text">Atracciones</span></a></li>
+                <li><a href="ofertas.html"><i class="fas fa-tags"></i><span class="nav-text">Ofertas</span></a></li>
+                <li><a href="tickets.html"><i class="fas fa-ticket-alt"></i><span class="nav-text">Tickets</span></a>
+                </li>
+                <li><button class="dark-mode-toggle" aria-label="Cambiar modo oscuro"><i
+                            class="fas fa-moon"></i></button></li>
+            </ul>
+        </nav>
+        <button class="hamburger" aria-label="Abrir menú"><i class="fas fa-bars"></i></button>
+    </header>
 
   <main class="main">
     <section class="info">
@@ -72,6 +76,25 @@
       <h2>Resumen de Compra</h2>
       <p id="resumen-texto"></p>
     </section>
+            <section>
+            <div class="contacto">
+                <h2 class="titulo-nombre">Contactanos</h2>
+                <div class="icons-container">
+                    <div class="icon-container">
+                        <img class="icon" src="./src/imagenes/smartphone-2-svgrepo-com.svg" alt="icono-casa">
+                        <h2>Llamanos</h2>
+                    </div>
+                    <div class="icon-container">
+                        <img class="icon" src="./src/imagenes/mail-pencil-svgrepo-com.svg" alt="icono-mail">
+                        <h2>Envia un Mail</h2>
+                    </div>
+                    <div class="icon-container">
+                        <img class="icon" src="./src/imagenes/home-svgrepo-com.svg" alt="Icono-visitanos">
+                        <h2>Visitanos</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
   </main>
 
   <footer class="footer">
