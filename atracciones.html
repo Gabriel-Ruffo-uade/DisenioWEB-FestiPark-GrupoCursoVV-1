@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atracciones - Festi Park</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">Festi Park</div>
+    <nav class="nav" id="nav">
+      <ul class="nav-list">
+        <li><a href="index.html"><i class="icon-home"></i><span>Inicio</span></a></li>
+        <li><a href="atracciones.html" aria-current="page"><i class="icon-map"></i><span>Atracciones</span></a></li>
+        <li><a href="ofertas.html"><i class="icon-tag"></i><span>Ofertas</span></a></li>
+        <li><a href="tickets.html"><i class="icon-ticket"></i><span>Entradas</span></a></li>
+      </ul>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú de navegación">
+      ☰
+    </button>
+    <button id="toggle-dark" class="toggle-dark" aria-label="Activar modo oscuro">🌓</button>
+  </header>
+
+  <main class="main">
+    <section class="info">
+      <h1>Atracciones Interactivas</h1>
+      <p>Descubrí las atracciones que hacen de Festi Park una experiencia única para toda la familia. ¡Explorá el mapa y conocé cada rincón!</p>
+    </section>
+
+    <section class="mapa">
+      <img src="/assets/mapa-parque.png" alt="Mapa interactivo del parque" usemap="#mapaAtracciones" class="mapa-img" />
+
+      <map name="mapaAtracciones">
+        <area shape="circle" coords="150,200,30" alt="Montaña Rusa" href="#montanaRusa" />
+        <area shape="circle" coords="300,150,30" alt="Zona Infantil" href="#zonaInfantil" />
+        <area shape="circle" coords="450,220,30" alt="Casa del Terror" href="#casaTerror" />
+      </map>
+    </section>
+
+    <section class="atracciones" id="montanaRusa">
+      <h2>🎢 Montaña Rusa Relámpago</h2>
+      <p>Una de las atracciones más rápidas del parque. Ideal para los amantes de la adrenalina.</p>
+    </section>
+
+    <section class="atracciones" id="zonaInfantil">
+      <h2>🎠 Zona Infantil Aventura</h2>
+      <p>Juegos seguros y divertidos pensados para los más pequeños y sus familias.</p>
+    </section>
+
+    <section class="atracciones" id="casaTerror">
+      <h2>👻 La Casa del Terror</h2>
+      <p>¡Atrevete a entrar! Un recorrido lleno de sustos, efectos especiales y criaturas sorprendentes.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Festi Park. Todos los derechos reservados.</p>
+    <nav class="footer-nav">
+      <a href="#">Accesibilidad</a>
+      <a href="#">Privacidad</a>
+      <a href="#">Contacto</a>
+    </nav>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+
+</html>

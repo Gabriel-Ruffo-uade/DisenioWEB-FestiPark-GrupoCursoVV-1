@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ofertas - Festi Park</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">Festi Park</div>
+    <nav class="nav" id="nav">
+      <ul class="nav-list">
+        <li><a href="index.html"><i class="icon-home"></i><span>Inicio</span></a></li>
+        <li><a href="atracciones.html"><i class="icon-map"></i><span>Atracciones</span></a></li>
+        <li><a href="ofertas.html" aria-current="page"><i class="icon-tag"></i><span>Ofertas</span></a></li>
+        <li><a href="tickets.html"><i class="icon-ticket"></i><span>Entradas</span></a></li>
+      </ul>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú de navegación">☰</button>
+    <button id="toggle-dark" class="toggle-dark" aria-label="Activar modo oscuro">🌓</button>
+  </header>
+
+  <main class="main">
+    <section class="info">
+      <h1>Ofertas y Promociones</h1>
+      <p>¡Aprovechá nuestras promociones exclusivas y disfrutá más por menos en Festi Park!</p>
+    </section>
+
+    <section class="ofertas-grid">
+      <article class="oferta">
+        <img src="/assets/oferta-familia.jpg" alt="Promo familiar" class="oferta-img">
+        <div class="oferta-info">
+          <h2>Pack Familiar</h2>
+          <p>4 entradas al precio de 3. Ideal para padres con hijos.</p>
+          <a href="tickets.html" class="btn">Comprar</a>
+        </div>
+      </article>
+
+      <article class="oferta">
+        <img src="/assets/oferta-amigos.jpg" alt="Promo amigos" class="oferta-img">
+        <div class="oferta-info">
+          <h2>Jóvenes Aventureros</h2>
+          <p>2x1 en entradas los viernes para menores de 25 años.</p>
+          <a href="tickets.html" class="btn">Comprar</a>
+        </div>
+      </article>
+
+      <article class="oferta">
+        <img src="/assets/oferta-aniversario.jpg" alt="Promo aniversario" class="oferta-img">
+        <div class="oferta-info">
+          <h2>Aniversario Festi Park</h2>
+          <p>Entrada gratis para quienes cumplan años ese día. ¡Traé tu DNI!</p>
+          <a href="tickets.html" class="btn">Comprar</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Festi Park. Todos los derechos reservados.</p>
+    <nav class="footer-nav">
+      <a href="#">Accesibilidad</a>
+      <a href="#">Privacidad</a>
+      <a href="#">Contacto</a>
+    </nav>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+
+</html>

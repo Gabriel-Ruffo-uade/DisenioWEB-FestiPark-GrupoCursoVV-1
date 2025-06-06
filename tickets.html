@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compra de Tickets - Festi Park</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">Festi Park</div>
+    <nav class="nav" id="nav">
+      <ul class="nav-list">
+        <li><a href="index.html"><i class="icon-home"></i><span>Inicio</span></a></li>
+        <li><a href="atracciones.html"><i class="icon-map"></i><span>Atracciones</span></a></li>
+        <li><a href="ofertas.html"><i class="icon-tag"></i><span>Ofertas</span></a></li>
+        <li><a href="tickets.html" aria-current="page"><i class="icon-ticket"></i><span>Entradas</span></a></li>
+      </ul>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú de navegación">☰</button>
+    <button id="toggle-dark" class="toggle-dark" aria-label="Activar modo oscuro">🌓</button>
+  </header>
+
+  <main class="main">
+    <section class="info">
+      <h1>Compra de Entradas</h1>
+      <p>Elegí tus entradas, aplicá promociones y planificá tu visita a Festi Park.</p>
+    </section>
+
+    <form id="form-tickets" class="formulario" novalidate>
+      <div class="campo">
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" required />
+      </div>
+
+      <div class="campo">
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+
+      <div class="campo">
+        <label for="cantidad">Cantidad de entradas:</label>
+        <input type="number" id="cantidad" name="cantidad" min="1" required />
+      </div>
+
+      <div class="campo">
+        <label for="fecha">Fecha de visita:</label>
+        <input type="date" id="fecha" name="fecha" required />
+      </div>
+
+      <div class="campo">
+        <label for="promocion">Promoción:</label>
+        <select id="promocion" name="promocion">
+          <option value="">-- Seleccioná una promoción --</option>
+          <option value="familia">Pack Familiar</option>
+          <option value="jovenes">Jóvenes Aventureros</option>
+          <option value="cumple">Cumpleaños</option>
+        </select>
+      </div>
+
+      <div class="resumen" id="mensaje-error" aria-live="polite"></div>
+
+      <button type="submit" class="btn">Comprar Entradas</button>
+    </form>
+
+    <section class="resumen" id="resumen-compra" hidden>
+      <h2>Resumen de Compra</h2>
+      <p id="resumen-texto"></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Festi Park. Todos los derechos reservados.</p>
+    <nav class="footer-nav">
+      <a href="#">Accesibilidad</a>
+      <a href="#">Privacidad</a>
+      <a href="#">Contacto</a>
+    </nav>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+
+</html>
