@@ -573,6 +573,71 @@ footer a {
   text-decoration: none;
 }
 
+/********Seccion ofertas********/
+.oferta {
+  margin-bottom: 40px;
+}
+.ofertas-grid {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.oferta-info{
+  text-align: center;
+}
+
+.info {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+
+.oferta-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;  
+  overflow: hidden;  
+}
+
+.oferta-h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: var(--azul-oscuro);
+  text-align: center;
+}
+
+.oferta-p {
+  font-size: 1rem;
+  color: var(--azul-oscuro);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.oferta-p2 {
+  font-size: 0.5rem;
+  color: var(--azul-oscuro);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.oferta-btn{
+  display: inline-block;
+  background-color: #EF233C;      
+  color: #FFFFFF;                
+  padding: 10px 20px;              
+  border-radius: 25px;            
+  text-decoration: none;           
+  font-weight: 500;                
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.oferta-btn:hover {
+  background-color: #D7263D;       
+}
 /********Para Tablets********/
 @media (min-width: 600px) {
   .nav {
