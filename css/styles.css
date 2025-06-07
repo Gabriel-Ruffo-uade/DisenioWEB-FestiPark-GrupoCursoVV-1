@@ -598,6 +598,12 @@ footer a {
   border-radius: 14px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;  
+  transition: transform 0.3s ease;
+}
+
+.oferta-img:hover {
+  transform: scale(1.05);
+  cursor: default;   
 }
 
 .oferta-heading {
@@ -652,8 +658,14 @@ footer a {
   height: 400px;        
   object-fit: cover;    
   border-radius: 8px;    
+  transition: transform 0.3s ease;
  }
  
+.oferta-img-container img:hover {
+  transform: scale(1.05);
+  cursor: default;   
+}
+
 .oferta-btn:hover {
   background-color: #D7263D;       
 }
