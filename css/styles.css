@@ -582,8 +582,7 @@ footer a {
   margin: 0 auto;
   padding: 20px;
 }
-
-.oferta-info{
+.oferta-info {
   text-align: center;
 }
 
@@ -601,18 +600,27 @@ footer a {
   overflow: hidden;  
 }
 
-.oferta-h2 {
-  font-size: 1.4rem;
-  margin-bottom: 10px;
-  color: var(--azul-oscuro);
-  text-align: center;
+.oferta-heading {
+  align-items: center;
+  justify-content: center;           
+  margin-bottom: 5px;  
+}
+
+.oferta-heading h2 {
+  margin: 0;
+  color: #EF233C;     
+  font-size: 2rem;
+  font-weight: 800;
 }
 
 .oferta-p {
-  font-size: 1rem;
-  color: var(--azul-oscuro);
   text-align: center;
-  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.95rem;
+  color: var(--azul-oscuro);
+  margin-top: 0;
+  margin-bottom: 24px;
 }
 
 .oferta-p2 {
