@@ -6,9 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Atracciones - Festi Park</title>
   <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="icon" type="image/png" href="src/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
 <body>
@@ -16,9 +18,9 @@
         <div class="logo"><img src="./src/logo.png" alt="Logo" /></div>
         <nav class="nav" aria-label="Menú principal">
             <ul class="nav-list">
-                <li><a href="index.html" class="active"><i class="fas fa-home"></i><span
+                <li><a href="index.html"><i class="fas fa-home"></i><span
                             class="nav-text">Inicio</span></a></li>
-                <li><a href="atracciones.html"><i class="fas fa-map-marker-alt"></i><span
+                <li><a href="atracciones.html" class="active"><i class="fas fa-map-marker-alt"></i><span
                             class="nav-text">Atracciones</span></a></li>
                 <li><a href="ofertas.html"><i class="fas fa-tags"></i><span class="nav-text">Ofertas</span></a></li>
                 <li><a href="tickets.html"><i class="fas fa-ticket-alt"></i><span class="nav-text">Tickets</span></a>
@@ -33,20 +35,11 @@
   <main class="main">
     <section class="info">
       <h1>Atracciones Interactivas</h1>
-      <p>Descubrí las atracciones que hacen de Festi Park una experiencia única para toda la familia. ¡Explorá el mapa y conocé cada rincón!</p>
+      <p>Descubrí las atracciones que hacen de Festi Park una experiencia única para toda la familia.</p>
     </section>
-
-    <section class="mapa">
-      <img src="/assets/mapa-parque.png" alt="Mapa interactivo del parque" usemap="#mapaAtracciones" class="mapa-img" />
-
-      <map name="mapaAtracciones">
-        <area shape="circle" coords="150,200,30" alt="Montaña Rusa" href="#montanaRusa" />
-        <area shape="circle" coords="300,150,30" alt="Zona Infantil" href="#zonaInfantil" />
-        <area shape="circle" coords="450,220,30" alt="Casa del Terror" href="#casaTerror" />
-      </map>
-    </section>
+    
             <section class="galeria">
-            <h2>Atracciones para todos los gustos</h2>            
+            <h2>¡Explorá nuestras atracciones y descubrí diversión para todas las edades!</h2>            
             <div class="carousel-container">
                 <button class="nav-arrow left">‹</button>
                 <div class="carousel-track">
@@ -73,20 +66,78 @@
                 <div class="dot" data-index="4"></div>
                 <div class="dot" data-index="5"></div>
             </div>
-        </section>
-    <section class="atracciones" id="montanaRusa">
-      <h2>🎢 Montaña Rusa Relámpago</h2>
-      <p>Una de las atracciones más rápidas del parque. Ideal para los amantes de la adrenalina.</p>
+          </section>
+  
+<section class="atracciones seccion-dividida" id="familiar">
+      <h2 class="titulo-seccion">🎡 Atracciones Familiares</h2>
+      <h2 class="titulo-seccion">Diversión para grandes y chicos.</h2>
+      <div class="grid-atracciones">
+        <article class="atraccion">
+          <img src="./src/imagenes/imagen1.jpg" alt="Vuelta al Mundo" />
+          <h3>Vuelta al Mundo</h3>
+          <p>Una vista panorámica para compartir en familia.</p>
+        </article>
+        <article class="atraccion">
+          <img src="./src/imagenes/imagen2.jpg" alt="Barco Pirata" />
+          <h3>Barco Pirata</h3>
+          <p>Aventura para grandes y chicos.</p>
+        </article>
+      </div>
     </section>
 
-    <section class="atracciones" id="zonaInfantil">
-      <h2>🎠 Zona Infantil Aventura</h2>
-      <p>Juegos seguros y divertidos pensados para los más pequeños y sus familias.</p>
+    <section class="atracciones seccion-dividida" id="aventura">
+      <h2 class="titulo-seccion">🎢 Juegos de Aventura</h2>
+      <h2 class="titulo-seccion">¿Listos para la acción y la adrenalina?</h2>
+      <div class="grid-atracciones">
+        <article class="atraccion">
+          <img src="./src/imagenes/imagen5.jpg" alt="Montana Rusa Relámpago" />
+          <h3>Montaña Rusa Relámpago</h3>
+          <p>Un paseo extremo, ideal para los amantes de la velocidad.</p>
+        </article>
+        <article class="atraccion">
+          <img src="./src/imagenes/imagen6.png" alt="Casa del Terror" />
+          <h3>Casa del Terror</h3>
+          <p>¡Atrévete a entrar a este recorrido escalofriante!</p>
+        </article>
+      </div>
     </section>
 
-    <section class="atracciones" id="casaTerror">
-      <h2>👻 La Casa del Terror</h2>
-      <p>¡Atrevete a entrar! Un recorrido lleno de sustos, efectos especiales y criaturas sorprendentes.</p>
+    <section class="atracciones seccion-dividida" id="infantil">
+      <h2 class="titulo-seccion">🎠 Juegos Infantiles</h2>
+      <h2 class="titulo-seccion">Diversión segura y mágica para los más pequeños y sus familias.</h2>
+      <div class="grid-atracciones">
+        <article class="atraccion">
+          <img src="./src/imagenes/imagen5.jpg" alt="Calesita" />
+          <h3>Calesita</h3>
+          <p>Colores y magia para los más pequeños.</p>
+        </article>
+        <article class="atraccion">
+          <img src="./src/imagenes/imagen6.png" alt="Trencito Mágico" />
+          <h3>Trencito Mágico</h3>
+          <p>Un paseo tranquilo entre sonrisas y fantasía.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <section class="info">
+    <h1>Encontranos</h1>
+      <p>¡Explorá el mapa y conocé cada rincón!</p>
+
+    <section class="mapa">
+      <img src="./src/imagenes/mapa-parque.png" usemap="#mapaParque" alt="Mapa de Parque de Diversiones" />
+
+      <map name="mapaParque">
+        <area target="" alt="Juegos Infantiles" title="Juegos Infantiles" href="#infantil" coords="50,735,333,878" shape="rect">
+        <area target="" alt="Juegos Infantiles" title="Juegos Infantiles" href="#infantil" coords="667,864,962,986" shape="rect">
+        <area target="" alt="Juegos de aventura" title="Juegos de aventura" href="#aventura" coords="395,542,727,665" shape="rect">
+        <area target="" alt="Juegos de aventura" title="Juegos de aventura" href="#aventura" coords="737,300,980,430" shape="rect">
+        <area target="" alt="Atracciones familiares" title="Atracciones familiares" href="#familiar" coords="59,272,384,369" shape="rect">
+        <area target="" alt="Atracciones familiares" title="Atracciones familiares" href="#familiar" coords="421,244,720,327" shape="rect">
+      </map>
+      </section>
+  </section>
+    
     <section>
       <div class="contacto">
         <h2 class="titulo-nombre">Contactanos</h2>
