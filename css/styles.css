@@ -2,10 +2,10 @@
 :root {
   --rojo: #EF233C;
   --amarillo: #FFD100;
-  --azul-oscuro: #2B2D42;
+  --color-principal: #2B2D42;
   --rosa: #F62A66;
   --verde: #58AB54;
-  --blanco: #ffffff;
+  --color-secundario: #ffffff;
   --fuente: 'Inter', sans-serif;
 }
 
@@ -23,14 +23,14 @@ html {
 
 body {
   font-family: var(--fuente);
-  background-color: var(--blanco);
-  color: var(--azul-oscuro);
+  background-color: var(--color-secundario);
+  color: var(--color-principal);
   line-height: 1.6;
 }
 
 header {
   background-color: var(--rojo);
-  color: var(--blanco);
+  color: var(--color-secundario);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -51,6 +51,10 @@ header.scrolled {
 
 main {
   padding-top: 80px;
+}
+
+.hidden{
+  display: none !important;
 }
 
 .logo {
@@ -83,7 +87,7 @@ main {
 }
 
 .nav-list a {
-  color: var(--blanco);
+  color: var(--color-secundario);
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -138,14 +142,19 @@ main {
   font-size: 1.5rem;
   background: none;
   border: none;
-  color: var(--blanco);
+  color: var(--color-secundario);
   cursor: pointer;
+}
+
+.sun {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .dark-mode-toggle {
   background: none;
   border: none;
-  color: var(--blanco);
+  color: var(--color-secundario);
   font-size: 1.2rem;
   cursor: pointer;
 }
@@ -174,14 +183,14 @@ main {
   top: 20%;
   left: 50%;
   transform: translate(-50%, -20%);
-  color: var(--blanco);
+  color: var(--color-secundario);
   text-align: center;
   z-index: 2;
 }
 
 .superposicion-texto h1 {
   font-size: 2.5rem;
-  color: var(--azul-oscuro);
+  color: var(--color-principal);
 }
 
 .superposicion-texto .eslogan {
@@ -202,8 +211,8 @@ main {
   border-radius: 999px;
   /* background-color: var(--rosa); */
   background: #2B2D42;
-  background: linear-gradient(90deg,rgba(43, 45, 66, 1) 75%, rgba(109, 115, 168, 1) 100%);
-  color: var(--blanco);
+  background: linear-gradient(90deg,var(--color-principal) 75%, rgba(109, 115, 168, 1) 100%);
+  color: var(--color-secundario);
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -496,7 +505,7 @@ main {
 /* Modo oscuro dinámico */
 body.dark {
   background-color: #1a1a1a;
-  color: var(--blanco);
+  color: var(--color-secundario);
 }
 
 body.dark .header,
@@ -514,11 +523,11 @@ body.dark .footer {
 }
 
 body.dark .bienvenida h1 {
-  color: var(--azul-oscuro);
+  color: var(--color-principal);
 }
 
 body.dark .bienvenida .eslogan {
-  color: var(--blanco);
+  color: var(--color-secundario);
 }
 
 @media (max-width: 599px) {
@@ -556,12 +565,12 @@ body.dark .bienvenida .eslogan {
 }
 .icon-link{
   text-decoration: none;
-  color: var(--azul-oscuro);
+  color: var(--color-principal);
 }
 
 footer {
-  background-color: var(--azul-oscuro);
-  color: var(--blanco);
+  background-color: var(--color-principal);
+  color: var(--color-secundario);
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
@@ -624,14 +633,14 @@ footer a {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 0.95rem;
-  color: var(--azul-oscuro);
+  color: var(--color-principal);
   margin-top: 0;
   margin-bottom: 24px;
 }
 
 .oferta-p2 {
   font-size: 0.5rem;
-  color: var(--azul-oscuro);
+  color: var(--color-principal);
   text-align: center;
   margin-bottom: 20px;
 }

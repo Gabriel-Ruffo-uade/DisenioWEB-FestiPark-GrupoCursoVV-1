@@ -136,3 +136,29 @@ function handleSwipe() {
 
 updateCarousel(0);
 };
+
+
+// Funcion de Modo oscuro y claro
+
+const darkMode = document.getElementById("dark-mode")
+const lightMode = document.getElementById("light-mode");
+const root = document.documentElement;
+
+function changeDarkMode() {
+	root.style.setProperty("--color-principal", "#ffffff");
+	root.style.setProperty("--color-secundario", "#2B2D42");
+	lightMode.classList.remove('hidden');
+    darkMode.classList.add('hidden');
+}
+
+function changeLightMode() {
+	root.style.setProperty("--color-principal", "#2B2D42");
+	root.style.setProperty("--color-secundario", "#ffffff");
+	lightMode.classList.add('hidden');
+    darkMode.classList.remove('hidden');
+}
+
+if (darkMode && lightMode) {
+	lightMode.addEventListener("click", changeLightMode);
+	darkMode.addEventListener("click", changeDarkMode);
+}
