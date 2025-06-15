@@ -2,13 +2,14 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Compra de Tickets - Festi Park</title>
-  <link rel="stylesheet" href="./css/styles.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Festi Park - Tu nueva forma de vivir un parque de diversiones" />
+    <title>Festi Park - Inicio</title>
+    <link rel="icon" type="image/png" href="src/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
 </head>
 
 <body>
@@ -16,107 +17,136 @@
         <div class="logo"><img src="./src/logo.png" alt="Logo" /></div>
         <nav class="nav" aria-label="Menú principal">
             <ul class="nav-list">
-                <li><a href="index.html" class="active"><i class="fas fa-home"></i><span
+                <li><a href="index.html"><i class="fas fa-home"></i><span
                             class="nav-text">Inicio</span></a></li>
                 <li><a href="atracciones.html"><i class="fas fa-map-marker-alt"></i><span
                             class="nav-text">Atracciones</span></a></li>
                 <li><a href="ofertas.html"><i class="fas fa-tags"></i><span class="nav-text">Ofertas</span></a></li>
-                <li><a href="tickets.html"><i class="fas fa-ticket-alt"></i><span class="nav-text">Tickets</span></a>
+                <li><a href="tickets.html" class="active"><i class="fas fa-ticket-alt"></i><span class="nav-text">Tickets</span></a>
                 </li>
                 <li><button class="dark-mode-toggle" aria-label="Cambiar modo oscuro"><i class="fas fa-moon" id="dark-mode"></i></button></li>
+                <li><button class="dark-mode-toggle"><img src="./src/imagenes/sun-svgrepo-com.svg" alt="" class="sun hidden" id="light-mode"></button></li>
             </ul>
         </nav>
         <button class="hamburger" aria-label="Abrir menú"><i class="fas fa-bars"></i></button>
     </header>
 
-  <main class="main">
-    <section class="info">
-      <h1>Compra de Entradas</h1>
-      <p>Elegí tus entradas, aplicá promociones y planificá tu visita a Festi Park.</p>
-    </section>
+<main class="main">
+  <section class="info">
+    <h1>Compra de Entradas</h1>
+    <p>Elegí tus entradas, aplicá promociones y planificá tu visita a Festi Park.</p>
+  </section>
 
-    <form id="form-tickets" class="formulario" novalidate>
-      <div class="campo">
-        <label for="nombre">Nombre completo:</label>
-        <input type="text" id="nombre" name="nombre" required />
-      </div>
+  <section class="precios">
+  <h2>Tarifas de Entradas</h2>
+  <div class="tarjetas-precio">
+    <div class="tarjeta">
+      <h3>Adulto</h3>
+      <h4>Tarifa estándar:</h4>
+      <p class="precio">$20.000</p>
+    </div>
+    <div class="tarjeta">
+      <h3>Niño</h3>
+      <h4>Tarifa estándar:</h4>
+      <p class="precio">$10.000</p>
+    </div>
+    <div class="tarjeta">
+      <h3>Promos</h3>
+      <ul>
+        <li><strong>Pack Familiar:</strong> 4x3</li>
+        <li><strong>Jóvenes Aventureros:</strong> 2x1</li>
+        <li><strong>Cumpleaños:</strong> Gratis</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-      <div class="campo">
-        <label for="email">Correo electrónico:</label>
-        <input type="email" id="email" name="email" required />
-      </div>
+  <section id="compra" class="formulario">
+  <h2>Compra</h2>
 
-      <div class="campo">
-        <label for="cantidad">Cantidad de entradas:</label>
-        <input type="number" id="cantidad" name="cantidad" min="1" required />
-      </div>
+  <!-- Paso 1: Selección de paquete -->
+  <form id="form-promocion" novalidate>
+    <label for="promocion">Promoción:</label>
+    <select id="promocion" name="promocion" required>
+      <option value="">-- Seleccioná una promoción --</option>
+      <option value="Estándar">Estándar</option>
+      <option value="Pack Familiar">Pack Familiar</option>
+      <option value="Jóvenes Aventureros">Jóvenes Aventureros</option>
+      <option value="Cumpleaños">Cumpleaños</option>
+    </select>
+  </form>
 
-      <div class="campo">
-        <label for="fecha">Fecha de visita:</label>
-        <input type="date" id="fecha" name="fecha" required />
-      </div>
+  <!-- Paso 2: Datos de compra -->
+  <form id="form-tickets" class="hidden" novalidate>
+    <label for="nombre">Nombre completo:</label>
+    <input type="text" id="nombre" name="nombre" required placeholder="Ej. Lucía Pérez" />
 
-      <div class="campo">
-        <label for="promocion">Promoción:</label>
-        <select id="promocion" name="promocion">
-          <option value="">-- Seleccioná una promoción --</option>
-          <option value="familia">Pack Familiar</option>
-          <option value="jovenes">Jóvenes Aventureros</option>
-          <option value="cumple">Cumpleaños</option>
-        </select>
-      </div>
+    <label for="email">Correo electrónico:</label>
+    <input type="email" id="email" name="email" required placeholder="Ej. ejemplo@email.com" />
 
-      <div class="resumen" id="mensaje-error" aria-live="polite"></div>
+    <label for="adultos">Adultos:</label>
+    <input type="number" id="adultos" name="adultos" min="1" required placeholder="Ej. 2" />
 
-      <button type="submit" class="btn">Comprar Entradas</button>
-    </form>
+    <label for="niños">Niños:</label>
+    <input type="number" id="ninos" name="niños" min="1" required placeholder="Ej. 2" />
 
-    <section class="resumen" id="resumen-compra" hidden>
-      <h2>Resumen de Compra</h2>
-      <p id="resumen-texto"></p>
-    </section>
-    <section>
-      <div class="contacto">
-        <h2 class="titulo-nombre">Contactanos</h2>
-        <div class="icons-container">
-          <div class="icon-container">
-            <a href="">
-              <img class="icon" src="./src/imagenes/smartphone-2-svgrepo-com.svg" alt="icono-casa">
-            </a>
-            <a href="" class="icon-link">
-              <h2>Llamanos</h2>
-            </a>
-          </div>
-          <div class="icon-container">
-            <a href="./">
-              <img class="icon" src="./src/imagenes/mail-pencil-svgrepo-com.svg" alt="icono-mail">
-            </a>
-            <a href="" class="icon-link">
-              <h2>Envia un Mail</h2>
-            </a>
-          </div>
-          <div class="icon-container">
-            <a href="">
-              <img class="icon" src="./src/imagenes/home-svgrepo-com.svg" alt="Icono-visitanos">
-            </a>
-            <a href="" class="icon-link">
-              <h2>Visitanos</h2>
-            </a>
-          </div>
+    <label for="fecha">Fecha de visita:</label>
+    <input type="date" id="fecha" name="fecha" required />
+
+    <input type="hidden" id="promo-seleccionada" name="promo" />
+
+    <button type="submit" class="btn">Comprar Entradas</button>
+    <p id="mensaje-error" class="error hidden" aria-live="polite"></p>
+  </form>
+</section>
+
+<!-- Resumen de compra -->
+<section class="resumen" id="resumen-compra" hidden>
+  <h2>Resumen de Compra</h2>
+  <p id="resumen-texto"></p>
+  <p>Recordá que si elegiste la promo Jóvenes Aventureros o Cumpleaños, deberás presentar tu DNI en la entrada.</p>
+  <button type="submit" class="btn" id="boton-finalizar">Finalizar</button>
+</section>
+
+<!-- Mensaje éxito -->
+<div id="mensaje-final" class="info hidden"></div>
+
+  <section>
+    <div class="contacto">
+      <h2 class="titulo-nombre">Contactanos</h2>
+      <div class="icons-container">
+        <div class="icon-container">
+          <a href="tel:+5491123456789">
+            <img class="icon" src="./src/imagenes/smartphone-2-svgrepo-com.svg" alt="Llamanos">
+          </a>
+          <a href="tel:+5491123456789" class="icon-link">
+            <h2>Llamanos</h2>
+          </a>
+        </div>
+        <div class="icon-container">
+          <a href="contacto.html">
+            <img class="icon" src="./src/imagenes/mail-pencil-svgrepo-com.svg" alt="Envianos un mail">
+          </a>
+          <a href="contacto.html" class="icon-link">
+            <h2>Envianos un Mail</h2>
+          </a>
+        </div>
+        <div class="icon-container">
+          <a href="https://maps.google.com" target="_blank">
+            <img class="icon" src="./src/imagenes/home-svgrepo-com.svg" alt="Visitanos">
+          </a>
+          <a href="https://maps.google.com" target="_blank" class="icon-link">
+            <h2>Visitanos</h2>
+          </a>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
+</main>
 
   <footer class="footer">
     <p>&copy; 2025 Festi Park. Todos los derechos reservados.</p>
-    <nav class="footer-nav">
-      <a href="#">Accesibilidad</a>
-      <a href="#">Privacidad</a>
-      <a href="#">Contacto</a>
-    </nav>
   </footer>
-
   <script src="scripts.js"></script>
 </body>
 
