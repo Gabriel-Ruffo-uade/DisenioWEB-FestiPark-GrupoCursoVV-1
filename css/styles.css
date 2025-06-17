@@ -206,21 +206,20 @@ main {
   margin-top: 1rem;
 }
 
-.superposicion-texto .botones button {
+.superposicion-texto .botones a {
   padding: 0.6rem 1.2rem;
   border: none;
   border-radius: 999px;
-  /* background-color: var(--rosa); */
-  background: #2B2D42;
-  background: linear-gradient(90deg,var(--color-principal) 75%, rgba(109, 115, 168, 1) 100%);
-  color: var(--color-secundario);
+  background-color: #2B2D42;
+  color: #ffffff;
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s;
+  text-decoration: none;
 }
 
-.superposicion-texto .botones button:hover {
-  background-color: var(--rojo);
+.superposicion-texto .botones a:hover {
+  background: var(--rojo)
 }
 
 /****Seccion Galeria de imagenes - Carrusell*/
@@ -680,7 +679,7 @@ footer a {
   background-color: #D7263D;       
 }
 
-/********Atracciones********/
+/* Atracciones y tickets */
 
 .grid-atracciones {
   display: grid;
@@ -733,7 +732,7 @@ footer a {
   line-height: 1.4;
 }
 
-.formulario-contacto {
+.formulario {
   max-width: 500px;
   margin: 2rem auto;
   padding: 1.5rem;
@@ -741,20 +740,21 @@ footer a {
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-.formulario-contacto h2 {
+.formulario h2 {
   text-align: center;
   margin-bottom: 1rem;
   color: var(--color-principal);
 }
 
-.formulario-contacto label {
+.formulario label {
   display: block;
   margin-top: 1rem;
   font-weight: bold;
 }
 
-.formulario-contacto input,
-.formulario-contacto textarea {
+.formulario input,
+.formulario textarea,
+.formulario select {
   width: 100%;
   padding: 0.7rem;
   margin-top: 0.5rem;
@@ -764,7 +764,7 @@ footer a {
   font-size: 1rem;
 }
 
-.formulario-contacto button {
+.btn {
   background-color: #EF233C;
   color: white;      
   margin-top: 1rem;             
@@ -777,7 +777,7 @@ footer a {
   font-weight: bold;
 }
 
-.formulario-contacto button:hover {
+.btn:hover {
   background-color: #D7263D;
 }
 
@@ -785,6 +785,65 @@ footer a {
   color: red;
   text-align: center;
   margin-top: 1rem;
+}
+
+.resumen {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.resumen button {
+  max-width: 500px;
+  width: 100%;
+  margin: 20px auto 0;
+  display: block;
+}
+
+.precios {
+  text-align: center;
+  margin: 40px auto;
+  max-width: 900px;
+}
+
+.tarjetas-precio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.tarjeta {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid;
+  border-radius: 15px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.tarjeta:hover {
+  transform: scale(1.05);
+}
+
+
+.precio {
+  font-size: 1.8rem;
+  color: var(--verde);
+  font-weight: bold;
+}
+
+.tarjeta ul {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.tarjeta li {
+  margin-bottom: 8px;
 }
 
 /********Para Tablets********/
