@@ -1027,6 +1027,26 @@ footer a {
     top: 50%;
     transform: translateY(-50%);
   }
+
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: var(--color-principal);
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    z-index: 100;
+  }
+
+  .nav-list.open {
+    max-height: 500px;
+  }
+
+  
   .carousel-cell img {
     height: 400px;
   }
