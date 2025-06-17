@@ -183,12 +183,13 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("formContacto");
   const mensajeError = document.getElementById("mensajeError");
+  const mensajeExito = document.getElementById("mensajeExito");
 
   form.addEventListener("submit", function (e) {
     e.preventDefault(); // No envía el formulario
 
     const nombre = document.getElementById("nombre").value.trim();
-	const apellido = document.getElementById("apellido").value.trim();
+	  const apellido = document.getElementById("apellido").value.trim();
     const email = document.getElementById("email").value.trim();
     const mensaje = document.getElementById("mensaje").value.trim();
 
@@ -196,7 +197,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (nombre && apellido && emailValido && mensaje) {
       mensajeError.classList.add("hidden");
-      alert("Mensaje enviado correctamente.");
+      mensajeExito.classList.remove("hidden");
       form.reset();
     } else {
       mensajeError.classList.remove("hidden");
@@ -251,6 +252,12 @@ document.addEventListener("DOMContentLoaded", function () {
             ninosInput.value = 0;
             ninosInput.readOnly = true;
             break;
+          case "Pack Anual":
+            adultosInput.value = 1;
+            adultosInput.readOnly = true;
+            ninosInput.value = 0;
+            ninosInput.readOnly = true;
+            break;
           default:
             adultosInput.value = "";
             adultosInput.readOnly = false;
@@ -299,6 +306,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Calcular total
       const precioAdulto = 20000;
       const precioNino = 10000;
+      const precioPackAnual = 100000;
       let total = 0;
 
       switch (promo) {
@@ -313,6 +321,10 @@ document.addEventListener("DOMContentLoaded", function () {
         case "Cumpleaños":
           // Gratis
           total = 0;
+          break;
+        case "Pack Anual":
+          // Precio del pack
+          total = precioPackAnual;
           break;
         default:
           // Estándar: suma normal

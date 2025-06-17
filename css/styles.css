@@ -855,6 +855,12 @@ footer a {
   margin-top: 1rem;
 }
 
+.exito {
+  color: var(--verde);
+  text-align: center;
+  margin-top: 1rem;
+}
+
 .resumen {
   text-align: center;
   font-size: 1rem;
