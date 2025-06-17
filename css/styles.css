@@ -7,6 +7,7 @@
   --verde: #58AB54;
   --color-secundario: #ffffff;
   --fuente: 'Inter', sans-serif;
+  --dot: #082a7b33
 }
 
 /* Reset base */
@@ -168,7 +169,7 @@ main {
 .img-full-container {
   position: relative;
   width: 100%;
-  height: auto;
+  height: 50rem;
   overflow: hidden;
 }
 
@@ -180,7 +181,7 @@ main {
 
 .superposicion-texto {
   position: absolute;
-  top: 20%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -20%);
   color: var(--color-secundario);
@@ -331,7 +332,7 @@ main {
 }
 
 .titulo-nombre {
-	color: rgb(8, 42, 123);
+	color: var(--color-principal);
 	font-size: 2.5rem;
 	font-weight: 700;
 	margin-bottom: 10px;
@@ -346,7 +347,7 @@ main {
 	top: 100%;
 	width: 100px;
 	height: 2px;
-	background: rgb(8, 42, 123);
+	background: var(--color-principal);
 }
 
 .titulo-nombre::before {
@@ -379,13 +380,13 @@ main {
 	width: 12px;
 	height: 12px;
 	border-radius: 50%;
-	background: rgba(8, 42, 123, 0.2);
+	background: var(--dot);
 	cursor: pointer;
 	transition: all 0.3s ease;
 }
 
 .dot.active {
-	background: rgb(8, 42, 123);
+	background: var(--color-principal);
 	transform: scale(1.2);
 }
 
@@ -560,8 +561,8 @@ body.dark .bienvenida .eslogan {
   display: flex;
 }
 .icon{
-  width: 50px;
-  height: 50px;
+  font-size: 40px;
+  color: var(--color-principal);
 }
 .icon-link{
   text-decoration: none;
