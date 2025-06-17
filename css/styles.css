@@ -1031,3 +1031,24 @@ footer a {
     height: 400px;
   }
 }
+
+#enlace-promo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px 20px;
+  background-color: var(--rojo);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  font-size: 16px;
+  font-weight: bold;
+  z-index: 9999;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#enlace-promo:hover {
+  background-color: var(--verde);
+}
