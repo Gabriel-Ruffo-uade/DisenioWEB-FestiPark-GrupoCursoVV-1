@@ -11,11 +11,11 @@ window.addEventListener('scroll', () => {
 window.onload = function() {
 //Constante para mostrar informacion de las tarjetas
 const infoImagenes = [
-	{ titulo: "Vuelta al mundo", informacion: "Diversion para toda la familia" },
+	{ titulo: "Vuelta al mundo", informacion: "Diversión para toda la familia" },
 	{ titulo: "Sorprendente", informacion: "Tu familia no lo va a olvidar nunca" },
-	{ titulo: "Diversion", informacion: "Momentos unicos con tus amigos" },
-	{ titulo: "Recuerdos", informacion: "Momentos unicos en familia" },
-	{ titulo: "Montaña Rusa", informacion: "La montaña rusa mas grande del mundo" },
+	{ titulo: "Diversión", informacion: "Momentos únicos con tus amigos" },
+	{ titulo: "Recuerdos", informacion: "Momentos únicos en familia" },
+	{ titulo: "Montaña Rusa", informacion: "La montaña rusa más grande del mundo" },
 	{ titulo: "Adrenalina", informacion: "Solo para valientes" }
 ];
 
@@ -277,14 +277,20 @@ document.addEventListener("DOMContentLoaded", function () {
       const promo = inputPromoOculta.value;
 
       // Validar campos obligatorios
-      if (isNaN(adultos) && isNaN(ninos)) {
-        mensajeError.textContent = "Por favor completa todos los campos correctamente.";
+      if ((isNaN(adultos) || adultos === 0) && (isNaN(ninos) || ninos === 0)) {
+        mensajeError.textContent = "Debés ingresar al menos un adulto o un niño.";
         mensajeError.classList.remove("hidden");
         return;
       }
 
       if (!nombre || !email || !fecha) {
         mensajeError.textContent = "Por favor completa todos los campos correctamente.";
+        mensajeError.classList.remove("hidden");
+        return;
+      }
+
+      if (!/\S+@\S+\.\S+/.test(email)) {
+        mensajeError.textContent = "Por favor ingresá un correo válido.";
         mensajeError.classList.remove("hidden");
         return;
       }
@@ -316,7 +322,7 @@ document.addEventListener("DOMContentLoaded", function () {
           }
           else if (isNaN(adultos)) {
             total = precioNino * ninos;
-            reak;
+            break;
           }
           else {
             total = precioAdulto * adultos + precioNino * ninos;
