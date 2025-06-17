@@ -192,11 +192,13 @@ main {
 .superposicion-texto h1 {
   font-size: 2.5rem;
   color: var(--color-principal);
+  text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
 }
 
 .superposicion-texto .eslogan {
   font-size: 1.5rem;
   margin-bottom: 1rem;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
 
 .superposicion-texto .botones {
@@ -451,6 +453,9 @@ main {
 	.card.right-2 {
 		transform: translateX(250px) scale(0.8) translateZ(-300px);
 	}
+  .mapa img{
+    width: 65%;
+  }
 }
 
 @media (max-width: 600px) {
@@ -550,14 +555,18 @@ body.dark .bienvenida .eslogan {
   align-items: center;
   margin: 2rem;
 }
-.icon-container{
+.icons-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.icon-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 15px 3rem;
-}
-.icons-container{
-  display: flex;
+  padding: 15px 2rem;
+  text-align: center;
 }
 .icon{
   font-size: 40px;
@@ -566,6 +575,63 @@ body.dark .bienvenida .eslogan {
 .icon-link{
   text-decoration: none;
   color: var(--color-principal);
+}
+
+/* Media queries para tablets */
+@media (max-width: 768px) {
+  .img-full-container{
+    height: auto;
+  }
+  .contacto{
+    margin: 1rem;
+  }
+  .icons-container {
+    flex-direction: row;
+    gap: 0rem;
+  }
+
+  .icon-container {
+    padding: 10px 1.5rem;
+    max-width: 45%;
+  }
+
+  .icon {
+    font-size: 35px;
+  }
+  .resumen{
+    margin: 0 2rem
+  }
+}
+
+/* Media queries para móviles */
+@media (max-width: 480px) {
+  .img-full-container{
+    height: 600px;
+  }
+  .img-full-container.img{
+    height: 100%;
+  }
+  .superposicion-texto .botones a{
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 2rem;
+  }
+  .icons-container {
+    align-items: center;
+  }
+
+  .icon-container {
+    padding: 10px 1rem;
+    max-width: 100%;
+  }
+
+  .icon {
+    font-size: 30px;
+  }
+
+  .icon-link h2 {
+    font-size: 1rem;
+  }
 }
 
 footer {
