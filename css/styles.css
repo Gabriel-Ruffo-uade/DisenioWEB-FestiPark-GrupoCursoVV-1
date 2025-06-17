@@ -46,7 +46,7 @@ header {
 }
 
 header.scrolled {
-  background-color: rgba(239, 35, 60, 0.8);
+  background-color: var(--rojo);
   backdrop-filter: blur(5px);
 }
 
@@ -258,7 +258,7 @@ main {
 	background: white;
 	border-radius: 20px;
 	overflow: hidden;
-	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 20px 40px var(--color-principal);
 	transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 	cursor: pointer;
 }
@@ -393,7 +393,7 @@ main {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
-	background: rgba(8, 42, 123, 0.6);
+	background: #082a7b99;
 	color: white;
 	width: 40px;
 	height: 40px;
@@ -605,7 +605,7 @@ footer a {
   width: 100%;
   height: auto;
   border-radius: 14px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px var(--color-principal);
   overflow: hidden;  
   transition: transform 0.3s ease;
 }
@@ -694,7 +694,7 @@ footer a {
   border-radius: 12px;
   padding: 1rem;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px var(--color-principal);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -737,7 +737,7 @@ footer a {
   margin: 2rem auto;
   padding: 1.5rem;
   border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px var(--color-principal);
 }
 
 .formulario h2 {
@@ -822,7 +822,7 @@ footer a {
   border-radius: 15px;
   padding: 20px;
   width: 250px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px var(--color-principal);
   transition: transform 0.2s ease;
 }
 
