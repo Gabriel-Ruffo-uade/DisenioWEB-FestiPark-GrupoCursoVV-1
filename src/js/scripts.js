@@ -11,6 +11,7 @@ window.addEventListener('scroll', () => {
 
 const hamburger = document.querySelector(".hamburger");
 const nav = document.querySelector(".nav");
+const navtext = document.querySelector(".nav-text");
 
 hamburger.addEventListener("click", () => {
   nav.classList.toggle("open");

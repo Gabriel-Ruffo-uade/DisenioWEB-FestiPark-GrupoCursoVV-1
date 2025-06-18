@@ -139,6 +139,15 @@ main {
   display: none;
 }
 
+.nav.open {
+  display:flex;
+}
+
+ul.nav-list{
+  max-height: 200px;
+}
+
+
 .hamburger {
   font-size: 1.5rem;
   background: none;
