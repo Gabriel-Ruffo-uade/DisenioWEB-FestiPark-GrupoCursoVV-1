@@ -8,11 +8,12 @@ window.addEventListener('scroll', () => {
   }
 });
 
+
 const hamburger = document.querySelector(".hamburger");
-const navList = document.querySelector(".nav-list");
+const nav = document.querySelector(".nav");
 
 hamburger.addEventListener("click", () => {
-  navList.classList.toggle("open");
+  nav.classList.toggle("open");
 });
 
 
