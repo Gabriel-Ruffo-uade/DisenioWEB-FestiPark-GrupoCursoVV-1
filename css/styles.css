@@ -83,6 +83,7 @@ main {
   right: 1rem;
   background-color: var(--rojo);
   padding: 1rem;
+  border-radius: 0.5rem;
   z-index: 100;
 }
 
@@ -134,14 +135,9 @@ main {
   transition: transform 0.2s;
 }
 
-.nav.open {
-  display:flex;
+.nav-text {
+  display: none;
 }
-
-ul.nav-list{
-  max-height: 18rem;
-}
-
 
 .hamburger {
   font-size: 1.5rem;
@@ -177,14 +173,18 @@ ul.nav-list{
 .img-full-container {
   position: relative;
   width: 100%;
-  height: 50rem;
+  height: auto;
   overflow: hidden;
+  
+  min-height: 600px;
+  
 }
 
 .img-full-container img {
   width: 100%;
   height: auto;
   display: block;
+  min-width: 901px;
 }
 
 .superposicion-texto {
@@ -192,21 +192,24 @@ ul.nav-list{
   top: 40%;
   left: 50%;
   transform: translate(-50%, -20%);
-  color: #fff;
+  color: white;  
   text-align: center;
   z-index: 2;
+  background-color: rgba(10, 10, 10, .5);
+  width: 100%;
+  padding: 17px;
+  
 }
+
 
 .superposicion-texto h1 {
   font-size: 2.5rem;
-  color: #2B2D42;
-  text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
 }
 
 .superposicion-texto .eslogan {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  font-weight: 1000;
 }
 
 .superposicion-texto .botones {
@@ -214,6 +217,7 @@ ul.nav-list{
   justify-content: center;
   gap: 1rem;
   margin-top: 1rem;
+  flex-wrap: wrap;
 }
 
 .superposicion-texto .botones a {
@@ -226,6 +230,7 @@ ul.nav-list{
   cursor: pointer;
   transition: background-color 0.3s;
   text-decoration: none;
+  text-wrap: nowrap;
 }
 
 .superposicion-texto .botones a:hover {
@@ -535,37 +540,29 @@ body.dark .footer {
   color: var(--amarillo);
 }
 
-body.dark .bienvenida h1 {
-  color: var(--color-principal);
-}
 
-body.dark .bienvenida .eslogan {
-  color: var(--color-secundario);
-}
 .footer{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
-.footer-content{
-  display: flex;
-  align-items: flex-start;
-  gap: 2rem;
-}
+
 .footer-group{
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 0.5rem;
+  Align-items: center;
 }
 .footer-group ul{
   list-style: none;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 0.5rem;
+  Align-items: center;
 }
 .footer-logo{
   height: 9rem;
+  width: 9rem;
+  margin: auto;
 }
 @media (max-width: 599px) {
   .imagenes {
@@ -611,9 +608,7 @@ body.dark .bienvenida .eslogan {
 
 /* Media queries para tablets */
 @media (max-width: 768px) {
-  .img-full-container{
-    height: auto;
-  }
+
   .contacto{
     margin: 1rem;
   }
@@ -640,16 +635,13 @@ body.dark .bienvenida .eslogan {
 
 /* Media queries para móviles */
 @media (max-width: 480px) {
-  .img-full-container{
-    height: 600px;
-  }
-  .img-full-container.img{
-    height: 100%;
-  }
+
+
   .superposicion-texto .botones a{
     display: flex;
     align-items: center;
     padding: 0.5rem 2rem;
+    text-wrap: nowrap;
   }
   .icons-container {
     align-items: center;
@@ -674,14 +666,6 @@ body.dark .bienvenida .eslogan {
   }
   .footer-group{
     align-items: stretch;
-  }
-  .dark-mode-toggle{
-    position: absolute;
-    left: 1rem;
-  }
-  #sun{
-    position: absolute;
-    bottom: 1rem;
   }
 }
 
@@ -986,6 +970,10 @@ footer a {
     position: static;
     background: none;
     padding: 0;
+  }
+
+  .nav-text {
+    display: none;
   }
 
   .hamburger {
