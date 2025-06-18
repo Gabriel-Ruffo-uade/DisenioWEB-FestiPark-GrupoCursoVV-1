@@ -83,7 +83,6 @@ main {
   right: 1rem;
   background-color: var(--rojo);
   padding: 1rem;
-  border-radius: 0.5rem;
   z-index: 100;
 }
 
@@ -135,16 +134,12 @@ main {
   transition: transform 0.2s;
 }
 
-.nav-text {
-  display: none;
-}
-
 .nav.open {
   display:flex;
 }
 
 ul.nav-list{
-  max-height: 200px;
+  max-height: 18rem;
 }
 
 
@@ -197,14 +192,14 @@ ul.nav-list{
   top: 40%;
   left: 50%;
   transform: translate(-50%, -20%);
-  color: var(--color-secundario);
+  color: #fff;
   text-align: center;
   z-index: 2;
 }
 
 .superposicion-texto h1 {
   font-size: 2.5rem;
-  color: var(--color-principal);
+  color: #2B2D42;
   text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
 }
 
@@ -680,6 +675,14 @@ body.dark .bienvenida .eslogan {
   .footer-group{
     align-items: stretch;
   }
+  .dark-mode-toggle{
+    position: absolute;
+    left: 1rem;
+  }
+  #sun{
+    position: absolute;
+    bottom: 1rem;
+  }
 }
 
 footer {
@@ -983,10 +986,6 @@ footer a {
     position: static;
     background: none;
     padding: 0;
-  }
-
-  .nav-text {
-    display: none;
   }
 
   .hamburger {
