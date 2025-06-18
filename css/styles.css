@@ -83,7 +83,6 @@ main {
   right: 1rem;
   background-color: var(--rojo);
   padding: 1rem;
-  border-radius: 0.5rem;
   z-index: 100;
 }
 
@@ -135,9 +134,15 @@ main {
   transition: transform 0.2s;
 }
 
-.nav-text {
-  display: none;
+.nav.open {
+  display:flex;
 }
+
+ul.nav-list{
+  max-height: 18rem;
+
+}
+
 
 .hamburger {
   font-size: 1.5rem;
@@ -173,11 +178,9 @@ main {
 .img-full-container {
   position: relative;
   width: 100%;
-  height: auto;
+  height: 50rem;
   overflow: hidden;
-  
   min-height: 600px;
-  
 }
 
 .img-full-container img {
@@ -192,15 +195,13 @@ main {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -20%);
-  color: white;  
+  color: #fff;  
   text-align: center;
   z-index: 2;
   background-color: rgba(10, 10, 10, .5);
   width: 100%;
   padding: 17px;
-  
 }
-
 
 .superposicion-texto h1 {
   font-size: 2.5rem;
@@ -667,6 +668,14 @@ body.dark .footer {
   .footer-group{
     align-items: stretch;
   }
+  .dark-mode-toggle{
+    position: absolute;
+    left: 1rem;
+  }
+  #sun{
+    position: absolute;
+    bottom: 1rem;
+  }
 }
 
 footer {
@@ -973,7 +982,7 @@ footer a {
   }
 
   .nav-text {
-    display: none;
+    display: inline;
   }
 
   .hamburger {
@@ -1030,7 +1039,7 @@ footer a {
     position: absolute;
     top: 70px;
     right: 0;
-    background-color: var(--color-principal);
+    background-color: var(--rojo);
     width: 100%;
     max-height: 0;
     overflow: hidden;
